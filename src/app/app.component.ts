@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LCHooks';
+  parentText = '<<Hello from PARENT!>>';
+
+  arrNamesInParent = ['Dima', 'Alex', 'Vadim', 'Yegeniy'];
+
+  addItemToParent(newItem: string) {
+    this.arrNamesInParent.push(newItem);
+  }
+
+  tooltip: string = 'tooltip from attr binding';
+
+  isColor: boolean = true;
+
 }

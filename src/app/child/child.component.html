@@ -1,0 +1,13 @@
+<p>This text comes form parent component: {{ someText }}</p>
+
+<label [class] = "['colLabel','backLabel']" [style.font-size.px] = "fz" for="item-input">Add a item:</label>
+<input [style] = "styleInput" type="text" id="item-input" #newItem>
+<button (click)="addNewItem(newItem.value)" [style.width] = "widthBtn">Add to parent's list</button>
+
+<br/>
+<br/>
+<button (click)="generateNum()" [style.width] = "widthBtn">Add random value</button>
+<br/>
+<div *ngFor="let item of arrayNum; index as i"><br/>{{i+1}} => {{[item]}}</div>
+
+
